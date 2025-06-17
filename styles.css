@@ -1,0 +1,559 @@
+/* Estilos generales */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #3498db;
+  --danger-color: #e74c3c;
+  --success-color: #2ecc71;
+  --warning-color: #f39c12;
+  --light-text: #ecf0f1;
+  --dark-text: #2c3e50;
+  --gray-text: #bdc3c7;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Contenedores */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Encabezado */
+header {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  flex: 1;
+}
+
+h1, h2, h3, h4 {
+  color: var(--light-text);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 1rem;
+  color: var(--gray-text);
+  margin-bottom: 10px;
+}
+
+/* Formularios */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gray-text);
+  font-weight: bold;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #4a4a4a;
+  background-color: #3d4f66;
+  color: var(--light-text);
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Botones */
+button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-btn {
+  background-color: var(--accent-color);
+  color: white;
+  width: 100%;
+  justify-content: center;
+}
+
+.login-btn:hover {
+  background-color: #2980b9;
+}
+
+.logout-btn {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.add-btn {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #27ae60;
+}
+
+.save-btn {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Secciones */
+section {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Gráficos */
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.chart-box {
+  background-color: #0f3460;
+  padding: 15px;
+  border-radius: 8px;
+  height: 300px;
+}
+
+/* Lista de hallazgos */
+.findings-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.finding-card {
+  background-color: #0f3460;
+  padding: 15px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.finding-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--light-text);
+}
+
+.finding-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.finding-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.finding-actions button {
+  padding: 8px;
+  min-width: 40px;
+  justify-content: center;
+}
+
+/* Checklist */
+.checklist-container {
+  display: grid;
+  gap: 20px;
+}
+
+.checklist-section {
+  background-color: #0f3460;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.checklist-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.checklist-checkbox {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.diagnostics-section {
+  background-color: #0f3460;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.badge.security {
+  background-color: #f72585;
+}
+
+.badge.process {
+  background-color: #7209b7;
+}
+
+.badge.tech {
+  background-color: var(--accent-color);
+}
+
+.badge.high {
+  background-color: var(--danger-color);
+}
+
+.badge.medium {
+  background-color: var(--warning-color);
+}
+
+.badge.low {
+  background-color: var(--success-color);
+}
+
+.badge.pending {
+  background-color: var(--warning-color);
+}
+
+.badge.in-progress {
+  background-color: var(--accent-color);
+}
+
+.badge.completed {
+  background-color: var(--success-color);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--secondary-color);
+  padding: 25px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--gray-text);
+}
+
+.close:hover {
+  color: var(--light-text);
+}
+
+/* Mensajes de error */
+.error-message {
+  color: var(--danger-color);
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Nuevos estilos para las funcionalidades agregadas */
+
+/* Dashboard Avanzado */
+.metrics-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.metric-card {
+  background-color: #0f3460;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metric-card h3 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.metric-card p {
+  font-size: 2rem;
+  margin: 10px 0 0;
+  font-weight: bold;
+}
+
+.advanced-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Planificación de Auditoría */
+.plans-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.plan-card {
+  background-color: #0f3460;
+  padding: 15px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.plan-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.plan-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.plan-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.plan-actions button {
+  padding: 8px;
+  min-width: 40px;
+  justify-content: center;
+}
+
+/* Matriz de Riesgos */
+.matrix-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+}
+
+.matrix-grid {
+  background-color: #0f3460;
+  padding: 15px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 300px;
+}
+
+.matrix-cell {
+  border: 1px solid #4a4a4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+.matrix-cell.high-impact {
+  background-color: rgba(231, 76, 60, 0.3);
+}
+
+.matrix-cell.medium-impact {
+  background-color: rgba(243, 156, 18, 0.3);
+}
+
+.matrix-cell.low-impact {
+  background-color: rgba(46, 204, 113, 0.3);
+}
+
+.matrix-label {
+  position: absolute;
+  font-weight: bold;
+}
+
+.matrix-label.probability {
+  left: 5px;
+}
+
+.matrix-label.impact {
+  top: 5px;
+}
+
+.risks-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.risk-card {
+  background-color: #0f3460;
+  padding: 15px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.risk-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.risk-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.risk-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.risk-actions button {
+  padding: 8px;
+  min-width: 40px;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .matrix-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .matrix-grid {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .charts-container,
+  .advanced-charts {
+    grid-template-columns: 1fr;
+  }
+  
+  .metrics-container {
+    grid-template-columns: 1fr;
+  }
+  
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .finding-card,
+  .plan-card,
+  .risk-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .finding-actions,
+  .plan-actions,
+  .risk-actions {
+    justify-content: flex-end;
+  }
+}
